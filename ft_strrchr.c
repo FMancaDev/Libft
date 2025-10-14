@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 21:43:00 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 22:49:57 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/10 23:52:20 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,26 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	const char	*last;
 
-	i = 0;
-	while (s[i])
+	last = (NULL);
+	while (*s)
 	{
-		i++;
+		if (*s == (char)c)
+			last = s;
+		s++;
 	}
-	while (i > 0)
-	{
-		if (s[i] == (char)c)
-		{
-			return ((char *)(s + i));
-		}
-		i--;
-	}
-	return (NULL);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return ((char *)last);
 }
 
 /*#include <stdio.h>
 
-int 	main()
+int	main()
 {
-	char 	str[] = "ioila icoimoi eisitais";
-	char	c = 'a';
+	char *s1 = "ola como estas hoje!";
+	int c = 's';
 
-	printf("original: %s\n", str);
-	printf("trying to find: %c\n", c);
-	printf("found: %s\n", ft_strrchr(str, c));
+	printf("found: %s\n", ft_strrchr(s1, c));
 }*/

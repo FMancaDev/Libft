@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fomanca <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 23:08:24 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/10 20:43:49 by fomanca          ###   ########.fr       */
+/*   Created: 2025/10/13 14:43:50 by fomanca           #+#    #+#             */
+/*   Updated: 2025/10/13 21:33:00 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if (c >= 32 && c <= 126)
+	unsigned int		i;
+	char				*str;
+
+	i = 0;
+	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (0);
+	while (s[i] != '\0')
 	{
-		return (1);
+		str[i] = (*f)(i, s[i]);
+		i++;
 	}
-	return (0);
+	str[i] = '\0';
+	return (str);
 }
 
-/*#include <stdio.h>
-
+/*char	f_test(unsigned int i, char s)
+{
+	s += +32;
+	return (s);
+}
 int	main()
 {
-	int	s1 = ' ';
-	int	s2 = 127;
-	int	s3 = '@';
-	int	s4 = 200;
-	int	s5 = '~';
-
-	printf("Is print?: %d\n", ft__isprint(s1));
-	printf("Is print?: %d\n", ft__isprint(s2));
-	printf("Is print?: %d\n", ft__isprint(s3));
-	printf("Is print?: %d\n", ft__isprint(s4));
-	printf("Is print?: %d\n", ft__isprint(s5));	
+	char	str[] = "AAA";
+	ft_putendl_fd(ft_strmapi(str, f_test), 1);
 }*/

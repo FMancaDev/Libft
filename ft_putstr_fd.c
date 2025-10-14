@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fomanca <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 21:01:41 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/13 23:55:38 by fomanca          ###   ########.fr       */
+/*   Created: 2025/10/13 22:32:38 by fomanca           #+#    #+#             */
+/*   Updated: 2025/10/13 22:51:55 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
-	while ((s[i] != (char)c) && (s[i]))
+	while (s[i])
 	{
+		write (fd, &s[i], 1);
 		i++;
 	}
-	if (s[i] != (char)c)
-	{
-		return (NULL);
-	}
-	else
-		return ((char *)&s[i]);
 }
 
-/*#include <stdio.h>
+/*#include <fcntl.h>
 
 int	main()
 {
-	char str[] = "primeira ocurrencia e:";
-	char c = 'a';
-
-	printf("found: %s\n", ft_strchr(str, c));
+	int fd = open("ola.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd < 0)
+	{
+		write (2, "Error opening file\n", 19);
+		return (1);
+	}
+	ft_putstr_fd("ola como estas\nola como estas\nola como estas", fd);
 }*/

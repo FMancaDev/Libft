@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fomanca <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 23:08:24 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/10 20:43:49 by fomanca          ###   ########.fr       */
+/*   Created: 2025/10/13 22:52:38 by fomanca           #+#    #+#             */
+/*   Updated: 2025/10/14 14:31:47 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= 32 && c <= 126)
-	{
-		return (1);
-	}
-	return (0);
+	ft_putstr_fd(s, fd);
+	write (fd, "\n", 1);
 }
 
-/*#include <stdio.h>
+/*#include <fcntl.h>
 
 int	main()
 {
-	int	s1 = ' ';
-	int	s2 = 127;
-	int	s3 = '@';
-	int	s4 = 200;
-	int	s5 = '~';
-
-	printf("Is print?: %d\n", ft__isprint(s1));
-	printf("Is print?: %d\n", ft__isprint(s2));
-	printf("Is print?: %d\n", ft__isprint(s3));
-	printf("Is print?: %d\n", ft__isprint(s4));
-	printf("Is print?: %d\n", ft__isprint(s5));	
+	int fd = open("teste.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd < 0)
+	{
+		write (2, "Error opening file\n", 19);
+		return (1);
+	}
+	ft_putstr_fd("ola como estas\nola como estas\nola como estas", fd);
 }*/

@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 22:37:50 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 22:52:58 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/10 23:58:12 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] || s2[i] && i < n)
+	while ((s1[i] || s2[i]) && (i < n))
 	{
 		if ((unsigned char)s1[i] != (unsigned char )s2[i])
 		{

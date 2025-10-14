@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fomanca <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 21:01:41 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/13 23:55:38 by fomanca          ###   ########.fr       */
+/*   Created: 2025/10/14 18:23:13 by fomanca           #+#    #+#             */
+/*   Updated: 2025/10/14 19:33:55 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*next_element;
 
-	i = 0;
-	while ((s[i] != (char)c) && (s[i]))
-	{
-		i++;
-	}
-	if (s[i] != (char)c)
-	{
+	next_element = malloc(sizeof(t_list));
+	if (!next_element)
 		return (NULL);
-	}
-	else
-		return ((char *)&s[i]);
+	next_element->content = content;
+	next_element->next = NULL;
+	return (next_element);
 }
 
 /*#include <stdio.h>
 
 int	main()
 {
-	char str[] = "primeira ocurrencia e:";
-	char c = 'a';
+	t_list	*list;
+	char 	*a = "fwedfwegferw";
 
-	printf("found: %s\n", ft_strchr(str, c));
+	list = ft_lstnew(a);
+	printf("%s", ((char *)list->content));
 }*/
