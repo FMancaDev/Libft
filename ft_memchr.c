@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 22:51:15 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 18:50:40 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:50:04 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ int 	main()
 	fd = ft_memchr(str, 'W', 10);
 	if (fd)
 		printf("Founded: %c\n", *fd);
-	else
+	else 
 		printf("Null\n");
 }*/
