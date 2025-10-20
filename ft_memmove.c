@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 16:22:48 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 17:21:52 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:50:46 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /*#include <stdio.h>
 #include <string.h>
 #include "libft.h"
-
+ 
 int main(void)
 {
     // Teste 1: Sem overlap (normal)
