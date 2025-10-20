@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 02:17:54 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 18:04:57 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:52:16 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 /*#include <stdio.h>
 
 int	main(void)
-{
+{ 
 	char	dest[10] = "dest";
 	char	src[10] = "src";
 	int	size = 6;
