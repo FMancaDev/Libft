@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 01:56:05 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 17:34:19 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:52:47 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 
 int main(void)
-{
+{ 
     char    src[] = "letters";
 	//char	src[] = "";
     char    dest[11];
