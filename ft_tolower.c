@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 20:48:26 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 18:07:58 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:54:59 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int 	main()
 {
 	int 	str = 'A';
 	
-	printf("lower: %c\n", ft_tolower(str));
+	printf("lower: %c\n", ft_tolower(str)) ;
 }*/
