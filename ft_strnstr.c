@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 20:22:37 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 19:45:13 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:53:26 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*#include <stdio.h>
 
 int	main()
-{
+{ 
 	char	biger[] = "hello how are we doing today! !@ #$ ^&";
 	char 	procura[] = "we";
 	int 	len = 25;
