@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 20:16:33 by fomanca           #+#    #+#             */
-/*   Updated: 2025/09/27 20:47:56 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:55:34 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_toupper(int c)
 
 /*#include <stdio.h>
 
-int 	main()
+int  	main()
 {
 	int str = 'a';
 
