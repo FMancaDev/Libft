@@ -6,7 +6,7 @@
 /*   By: fomanca <fomanca@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 13:16:17 by fomanca           #+#    #+#             */
-/*   Updated: 2025/10/09 22:03:15 by fomanca          ###   ########.fr       */
+/*   Updated: 2025/10/20 13:51:32 by fomanca          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strdup(const char *s)
 
 /*#include <stdio.h>
 
-int 	main()
+int main()
 {
 	char original[] = "welcome to common core";
 	char *duplicada;
